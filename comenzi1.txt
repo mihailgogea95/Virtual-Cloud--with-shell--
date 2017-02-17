@@ -1,0 +1,191 @@
+>> userinfo
+<<< 
+Username: guest
+Nume:  
+Prenume: 
+Created :2016/01/07 20:26:20
+Last Login: 2016/01/07 20:26:20
+
+>> login root rootpas
+<<< Ati intrat in modul -root-
+>> userinfo
+<<< 
+Username: root
+Nume:  
+Prenume: 
+Created :2016/01/07 20:26:20
+Last Login: 2016/01/07 20:26:33
+
+>> newuser user1 parola1 name1 surname1
+<<< User user1 adaugat !
+>> newuser user2 parola2 name2 surname2
+<<< User user2 adaugat !
+>> logout
+<<< Goodbye root, veti intra in modul Guest
+>> login user2 parola2
+<<< Bine ati venit user2
+>> userinfo
+<<< 
+Username: user2
+Nume: name2 
+Prenume: surname2
+Created :2016/01/07 20:26:58
+Last Login: 2016/01/07 20:27:04
+
+>> mkdir user2home rw
+<<< Reusit.
+>> mkdir forall
+<<< Reusit
+>> cd user2home
+<<< Succes
+>> mkdir EGC EG
+<<< Reusit
+>> cd EGC
+<<< Succes
+>> touch tema1.cpp 200 r
+<<< Reusit.
+>> rm tema1.cpp
+<<< Fail
+>> ls
+<<< 
+tema1.cpp
+
+>> cd ../EG
+<<< Succes
+>> cd ../..
+<<< Succes
+>> ls
+<<< 
+user2home
+forall
+
+>> cd user2home
+<<< Succes
+>> ls
+<<< 
+EGC
+EG
+
+>> cd EG
+<<< Succes
+>> cd ../../..
+<<< Fail
+>> touch text.txt
+<<< Reusit.
+>> pwd
+<<< /user2home/EG
+>> cd ../..
+<<< Succes
+>> ls -ar
+<<< 
+D: user2home dir [2016/01/07 20:27:16] 200 -rw-
+D: EGC dir [2016/01/07 20:27:31] 200 -
+F: tema1.cpp text [2016/01/07 20:27:47] 200 -r-
+D: EG dir [2016/01/07 20:27:31] 0 -
+F: text.txt text [2016/01/07 20:28:28] 0 -
+D: forall dir [2016/01/07 20:27:18] 0 -
+
+>> logout
+<<< Goodbye user2, veti intra in modul Guest
+>> login user1 parola1
+<<< Bine ati venit user1
+>> ls
+<<< 
+user2home
+forall
+
+>> rm forall
+<<< Succes
+>> mkdir user1home
+<<< Reusit
+>> cd user1home
+<<< Succes
+>> mkdir IOCLA POO
+<<< Reusit
+>> touch todolist.txt 50
+<<< Reusit.
+>> touch rawdata.txt 100 r
+<<< Reusit.
+>> cd IOCLA
+<<< Succes
+>> touch c1.txt
+<<< Reusit.
+>> cd ../POO
+<<< Succes
+>> touch tema.java 100 rw
+<<< Reusit.
+>> cd ../..
+<<< Succes
+>> ls -ar
+<<< 
+D: user2home dir [2016/01/07 20:27:16] 200 -
+D: EGC dir [2016/01/07 20:27:31] 200 -
+F: tema1.cpp text [2016/01/07 20:27:47] 200 -
+D: EG dir [2016/01/07 20:27:31] 0 -
+F: text.txt text [2016/01/07 20:28:28] 0 -
+D: user1home dir [2016/01/07 20:29:14] 250 -
+D: IOCLA dir [2016/01/07 20:29:22] 0 -
+F: c1.txt text [2016/01/07 20:29:52] 0 -
+D: POO dir [2016/01/07 20:29:22] 100 -
+F: tema.java text [2016/01/07 20:30:13] 100 -rw-
+F: todolist.txt text [2016/01/07 20:29:33] 50 -
+F: rawdata.txt binar [2016/01/07 20:29:39] 100 -r-
+
+>> rm user1home/todolist.txt
+<<< Succes
+>> rm user1home/rawdata.txt
+<<< Fail
+>> ls user1home
+<<< 
+IOCLA
+POO
+rawdata.txt
+
+>> logout
+<<< Goodbye user1, veti intra in modul Guest
+>> login root rootpas
+<<< Ati intrat in modul -root-
+>> rm user1home/rawdata.txt
+<<< Succes
+>> ls user1home
+<<< 
+IOCLA
+POO
+
+>> touch general.conf
+<<< Reusit.
+>> logout
+<<< Goodbye root, veti intra in modul Guest
+>> login user1 parola1
+<<< Bine ati venit user1
+>> rm general.conf
+<<< Succes
+>> ls
+<<< 
+user2home
+user1home
+
+>> cd user1home
+<<< Succes
+>> ls
+<<< 
+IOCLA
+POO
+
+>> rm (.*)O(.*)
+<<< Success
+>> ls
+<<< 
+
+>> logout
+<<< Goodbye user1, veti intra in modul Guest
+>> userinfo
+<<< 
+Username: guest
+Nume:  
+Prenume: 
+Created :2016/01/07 20:26:20
+Last Login: 2016/01/07 20:32:46
+
+>> ls
+<<< Guest nu are acest drept : ls !

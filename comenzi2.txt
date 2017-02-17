@@ -1,0 +1,361 @@
+>> userinfo
+<<< 
+Username: guest
+Nume:  
+Prenume: 
+Created :2016/01/07 20:54:18
+Last Login: 2016/01/07 20:54:18
+
+>> newuser user1 parola1 name1 surname1
+<<< User user1 adaugat !
+>> newuser user2 parola2 name2 surname2
+<<< User user2 adaugat !
+>> login root rootpas
+<<< Ati intrat in modul -root-
+>> userinfo
+<<< 
+Username: root
+Nume:  
+Prenume: 
+Created :2016/01/07 20:54:18
+Last Login: 2016/01/07 20:54:53
+
+>> logout
+<<< Goodbye root, veti intra in modul Guest
+>> login user1 parola1
+<<< Bine ati venit user1
+>> mkdir folder1 rw
+<<< Reusit.
+>> mkdir folder2 rw
+<<< Reusit.
+>> mkdir folder3 w
+<<< Reusit.
+>> mkdir folder4 folde5 folder6
+<<< Reusit
+>> ls
+<<< 
+folder1
+folder2
+folder3
+folder4
+folde5
+folder6
+
+>> ls -a
+<<< 
+D: folder1 dir [2016/01/07 20:55:16] 0 -rw-
+D: folder2 dir [2016/01/07 20:55:20] 0 -rw-
+D: folder3 dir [2016/01/07 20:55:25] 0 -w-
+D: folder4 dir [2016/01/07 20:55:32] 0 -
+D: folde5 dir [2016/01/07 20:55:32] 0 -
+D: folder6 dir [2016/01/07 20:55:32] 0 -
+
+>> cd folder1
+<<< Succes
+>> mkdir director1
+<<< Reusit
+>> cd director1
+<<< Succes
+>> pwd
+<<< /folder1/director1
+>> mkdir exemplu rw
+<<< Reusit.
+>> cd exemplu
+<<< Succes
+>> pwd
+<<< /folder1/director1/exemplu
+>> cd ../../../../..
+<<< Fail
+>> pwd
+<<< /folder1/director1/exemplu
+>> touch file.txt 70 rw
+<<< Reusit.
+>> cat file.txt
+<<< q1ptz2513bbdywnjy6kz6elbhaiw5tcjat7pnkxw6f8h9c8cp8hp6zn49w58d57qzwaaae
+>> touch file2.txt 100
+<<< Reusit.
+>> cat file2
+<<< Nu exista acest fisier !
+>> cat file2.txt
+<<< 0111110010010111011111011000110111100100010110100010100110011011110011000100110100000111101100101000
+>> ls -a
+<<< 
+F: file.txt text [2016/01/07 20:56:55] 70 -rw-
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+
+>> mkdir spatiu
+<<< Reusit
+>> cd spatiu
+<<< Succes
+>> pwd
+<<< /folder1/director1/exemplu/spatiu
+>> touch fisier 70 rw
+<<< Reusit.
+>> cat fisier
+<<< wrz158dfj5wz3g7955x2h3pkh7ynxc2ciznbg8l8rldrjzyelnwb8jggz1knmf96nibi6m
+>> cd ../..
+<<< Succes
+>> pwd
+<<< /folder1/director1
+>> ls
+<<< 
+exemplu
+
+>> upload exemplu
+<<< Succes
+>> ls -a
+<<< 
+D: exemplu dir [2016/01/07 20:56:23] 240 -rw-
+
+>> cd exemplu
+<<< Succes
+>> ls -a
+<<< 
+F: file.txt text [2016/01/07 20:56:55] 70 -rw-
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+D: spatiu dir [2016/01/07 20:57:41] 70 -
+
+>> rm file.txt
+<<< file.txt a fost sters
+>> rm spatiu
+<<< Fail
+>> rm -r spatiu
+<<< spatiu a fost sters
+>> ls -a
+<<< 
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+
+>> cd ..
+<<< Succes
+>> ls -a
+<<< 
+D: exemplu dir [2016/01/07 20:56:23] 100 -rw-
+
+>> ls -ar
+<<< 
+D: exemplu dir [2016/01/07 20:56:23] 100 -rw-
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+
+>> sync exemplu
+<<< Succes
+>> ls -a
+<<< 
+D: exemplu dir [2016/01/07 20:56:23] 240 -rw-
+
+>> cd exemplu
+<<< Succes
+>> ls -a
+<<< 
+F: file.txt text [2016/01/07 20:56:55] 70 -rw-
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+D: spatiu dir [2016/01/07 20:57:41] 70 -
+
+>> pwd
+<<< /folder1/director1/exemplu
+>> cd ../../..
+<<< Succes
+>> pwd
+<<< 
+>> ls
+<<< 
+folder1
+folder2
+folder3
+folder4
+folde5
+folder6
+
+>> ls -ar
+<<< 
+D: folder1 dir [2016/01/07 20:55:16] 240 -rw-
+D: director1 dir [2016/01/07 20:56:07] 240 -
+D: exemplu dir [2016/01/07 20:56:23] 240 -rw-
+F: file.txt text [2016/01/07 20:56:55] 70 -rw-
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+D: spatiu dir [2016/01/07 20:57:41] 70 -
+F: fisier text [2016/01/07 20:57:56] 70 -rw-
+D: folder2 dir [2016/01/07 20:55:20] 0 -rw-
+D: folder3 dir [2016/01/07 20:55:25] 0 -w-
+D: folder4 dir [2016/01/07 20:55:32] 0 -
+D: folde5 dir [2016/01/07 20:55:32] 0 -
+D: folder6 dir [2016/01/07 20:55:32] 0 -
+
+>> echo Maine merg la facultate
+<<< 
+Maine merg la facultate
+>> echo "Fara ghilimele"
+<<< 
+Fara ghilimele
+>> cd folder1
+<<< Succes
+>> ls
+<<< 
+director1
+
+>> cd director1
+<<< Succes
+>> pwd
+<<< /folder1/director1
+>> cd ../../folder2
+<<< Succes
+>> pwd
+<<< /folder2
+>> mkdir documente rw
+<<< Reusit.
+>> mkdir istoric proiect
+<<< Reusit
+>> mkdir directoare
+<<< Reusit
+>> ls -a
+<<< 
+D: documente dir [2016/01/07 21:01:07] 0 -rw-
+D: istoric dir [2016/01/07 21:01:28] 0 -
+D: proiect dir [2016/01/07 21:01:28] 0 -
+D: directoare dir [2016/01/07 21:01:37] 0 -
+
+>> rm (.*)i(.*)
+<<< Success
+>> ls -a
+<<< 
+D: documente dir [2016/01/07 21:01:07] 0 -rw-
+
+>> ls
+<<< 
+documente
+
+>> mkdir facultate backup ts iocla poo
+<<< Reusit
+>> ls -a
+<<< 
+D: documente dir [2016/01/07 21:01:07] 0 -rw-
+D: facultate dir [2016/01/07 21:02:38] 0 -
+D: backup dir [2016/01/07 21:02:38] 0 -
+D: ts dir [2016/01/07 21:02:38] 0 -
+D: iocla dir [2016/01/07 21:02:38] 0 -
+D: poo dir [2016/01/07 21:02:38] 0 -
+
+>> cd poo
+<<< Succes
+>> touch tema 200 r
+<<< Reusit.
+>> cat tema
+<<< 10001010100101010011010111101001000000001011100110011111011001110010010110110000010100111101100010101101011001101100111101101011001101001000000000010010100011100010010101100100101000011100010010000100
+>> rm tema
+<<< Fail
+>> cd ..
+<<< Succes
+>> ls
+<<< 
+documente
+facultate
+backup
+ts
+iocla
+poo
+
+>> ls -l -POO
+
+>> echo -POO "Exemplu dialog"
+
+>> ls -ar
+<<< 
+D: documente dir [2016/01/07 21:01:07] 0 -rw-
+D: facultate dir [2016/01/07 21:02:38] 0 -
+D: backup dir [2016/01/07 21:02:38] 0 -
+D: ts dir [2016/01/07 21:02:38] 0 -
+D: iocla dir [2016/01/07 21:02:38] 0 -
+D: poo dir [2016/01/07 21:02:38] 200 -
+F: tema binar [2016/01/07 21:03:04] 200 -r-
+
+>> pwd
+<<< /folder2
+>> rm folder2/tema
+<<< Fail
+>> logout
+<<< Goodbye user1, veti intra in modul Guest
+>> login root rootpas
+<<< Ati intrat in modul -root-
+>> ls
+<<< 
+folder1
+folder2
+folder3
+folder4
+folde5
+folder6
+
+>> rm folder2/tema
+<<< Fail
+>> ls -ar
+<<< 
+D: folder1 dir [2016/01/07 20:55:16] 240 -rw-
+D: director1 dir [2016/01/07 20:56:07] 240 -
+D: exemplu dir [2016/01/07 20:56:23] 240 -rw-
+F: file.txt text [2016/01/07 20:56:55] 70 -rw-
+F: file2.txt binar [2016/01/07 20:57:12] 100 -
+D: spatiu dir [2016/01/07 20:57:41] 70 -
+F: fisier text [2016/01/07 20:57:56] 70 -rw-
+D: folder2 dir [2016/01/07 20:55:20] 200 -rw-
+D: documente dir [2016/01/07 21:01:07] 0 -rw-
+D: facultate dir [2016/01/07 21:02:38] 0 -
+D: backup dir [2016/01/07 21:02:38] 0 -
+D: ts dir [2016/01/07 21:02:38] 0 -
+D: iocla dir [2016/01/07 21:02:38] 0 -
+D: poo dir [2016/01/07 21:02:38] 200 -
+F: tema binar [2016/01/07 21:03:04] 200 -rw-
+D: folder3 dir [2016/01/07 20:55:25] 0 -rw-
+D: folder4 dir [2016/01/07 20:55:32] 0 -
+D: folde5 dir [2016/01/07 20:55:32] 0 -
+D: folder6 dir [2016/01/07 20:55:32] 0 -
+
+>> ls -a
+<<< 
+D: folder1 dir [2016/01/07 20:55:16] 240 -rw-
+D: folder2 dir [2016/01/07 20:55:20] 200 -rw-
+D: folder3 dir [2016/01/07 20:55:25] 0 -rw-
+D: folder4 dir [2016/01/07 20:55:32] 0 -
+D: folde5 dir [2016/01/07 20:55:32] 0 -
+D: folder6 dir [2016/01/07 20:55:32] 0 -
+
+>> cd folder2
+<<< Succes
+>> ls
+<<< 
+documente
+facultate
+backup
+ts
+iocla
+poo
+
+>> cd poo
+<<< Succes
+>> ls
+<<< 
+tema
+
+>> rm tema
+<<< tema a fost sters
+>> logout
+<<< Goodbye root, veti intra in modul Guest
+>> userinfo
+<<< 
+Username: guest
+Nume:  
+Prenume: 
+Created :2016/01/07 20:54:18
+Last Login: 2016/01/07 21:06:02
+
+>> userinfo user1
+<<< 
+Username: user1
+Nume: name1 
+Prenume: surname1
+Created :2016/01/07 20:54:38
+Last Login: 2016/01/07 20:55:04
+
+>> echo Tema POO
+<<< 
+Tema POO
+>> logout
+<<< Sunteti deja guest! 
