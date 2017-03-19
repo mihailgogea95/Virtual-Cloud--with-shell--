@@ -4,7 +4,7 @@ Prenume : Mihail
 Grupa si serie : 324CC
 Tema : Programare orientate pe obiecte ( MyCloud )
 Grad de dificultate : 9/10
-Timpul alocat pentru tema : intre 32 ñ 40 de ore
+Timpul alocat pentru tema : intre 32 ‚Äì 40 de ore
 Observatii :
 Tema a fost lucrata in windows 7 cu ajutorul programului Eclipse (Mars) , fiind ultima versiune a lui Eclipse.
 Observatiile din Observer Pattern , adica logarile , delogarile si exceptiile vor fi salvate in fisierul evidenta.txt in care va fi salvat la iesirea din program( la apelarea comenzii : exit).
@@ -19,11 +19,11 @@ am facut o clasa commandFactory unde se returneaza un obiect de tipul Command.
 Am creat interfata Repository, iar apoi am creat o clasa abstract AbsRepository care implementeaza aceasta interfata , iar apoi am creat clasele Directory si File care extend aceasta clasa abstracta . 
 Clasa abstracta am facuto pentru a scrie metodele commune ale celor 2 clase.
 Am construit clasa Permisiune pentru a retine userul si permisiunile r sau w sau rw.
-Am construit clasa abstracta systemCommand pentru comenziile echo , login, logout,userinfo . ( Parola root : ìrootpasî)
+Am construit clasa abstracta systemCommand pentru comenziile echo , login, logout,userinfo . ( Parola root : ‚Äúrootpas‚Äù)
 Clasele abstract writeCommand si readCommand le-am facut pentru comenziile de citire si afisare.
 Am facut o clasa User in care retin datele necesare a unui user.
 Clasa user respecta tipul de Singleton Pattern , am facut putin diferit ,dar respecta deoarece aceasta clasa instantiata doar odata in clasa principala terminal si se instantiaza astfel
-userCurent = useriManagement.getUser(ìguestî); unde in clasa useriManagement am un vector de useri adica toti userii din sistem.
+userCurent = useriManagement.getUser(‚Äúguest‚Äù); unde in clasa useriManagement am un vector de useri adica toti userii din sistem.
 Clasele si interfetele urmatoare : Logger, Observer, Subject au fost create pentru Observer Pattern , in care se salveaza logarile , delogarile si exceptiile in fisierul evident.txt
 Toate exceptiile , dar si login si logout extind interfata Observer pentru a putea fi introduse in Logger , asa cum sugereaza Observer Pattern.
 Pentru fiecare comanda de scriere sau citire am mai scri detalii si in comentarile din clasele respective , de asemenea codul poate fi usor de inteles , straduinduma sa am un coding style cat mai placut.
@@ -36,22 +36,22 @@ mkdir foder1 folder2 folder3 folder4 ..
 Daca nu au fost introduse permisiuni atunci nimeni nu va avea drept de citire si scriere asupra lor, acest fapt este valabil si pentru comanda touch.
 Pentru comanda ls sunt acceptate urmatoarele :
 ls
-ls ñr
-ls ña
-ls ñar
+ls ‚Äìr
+ls ‚Äìa
+ls ‚Äìar
 ls folder
 ls fisier
 Pentru comanda cd sunt acceptate urmatoarele comenzi :
 cd folder
 cd cale-absoluta
-Pentru comanda rm se poate sterge directoarele goale si fisierele. Daca se doreste stergerea directoarelor care au dimensiune atunci se va apela rm ñr folder. Comanda rm merge si pentru cale absoluta.
+Pentru comanda rm se poate sterge directoarele goale si fisierele. Daca se doreste stergerea directoarelor care au dimensiune atunci se va apela rm ‚Äìr folder. Comanda rm merge si pentru cale absoluta.
 Comanda echo afiseaza tot ce se scrie dupa ea , dar daca continutul care se doreste a fi afisat este cuprins intre ghilimele atunci se va afisa fara ghilimele , deoarece asa este in linux terminal.
 Comenzile urmatoare afiseaza out-tul formatat in ferestre interne:
-ls ñl ñPOO
-userinfo ñPOO
-echo ñPOO
+ls ‚Äìl ‚ÄìPOO
+userinfo ‚ÄìPOO
+echo ‚ÄìPOO
 Am implementat si clasele comenzilor upload si sync cu tot cu exceptiile dorite.
-Pentru a se iesi din program se tasteaza comanda : ìexitî.
+Pentru a se iesi din program se tasteaza comanda : ‚Äúexit‚Äù.
 Am respectat Design Pattern si am implementat toate cerintele task-ului 1
 Sistemul Cloud task 2 :
 Am implementat toate clase dorite in acest task . Am creat o clasa StoreStation care sa fie statie pentru a uploada . Am facut o clasa clonare pentru a clona un director. 
@@ -64,8 +64,8 @@ Intefata grafica task 3:
 In clasa main se va apela programul.
 In clasa terminal am facut interfata grafica , derivand din JFrame. Am introdus Look-And-Feel din arhiva temei , dar dupa introducere se vedea urat deoarece fundalul terminalului este negru si ramanea sters , asa ca am introdus look-and-feel Nimbus .
 Terminalul meu este compus dintr-un JTextArea unde sunt introduse comenzile date si outputul si un JTextField unde introduc comanda.
-Comenzile formatate trebuie introduse astfel : ìls ñl ñPOOî, ìuserinfo ñPOOî si ìecho ñPOOî.
-Pentru comenzile ls -l -POO , userinfo -POO si echo ñPOO vor aparea ca intr-un desktop ( cu ajutorul clase JDesktop) noi ferestre unde vor aparea outputul in mod formatat.
+Comenzile formatate trebuie introduse astfel : ‚Äúls ‚Äìl ‚ÄìPOO‚Äù, ‚Äúuserinfo ‚ÄìPOO‚Äù si ‚Äúecho ‚ÄìPOO‚Äù.
+Pentru comenzile ls -l -POO , userinfo -POO si echo ‚ÄìPOO vor aparea ca intr-un desktop ( cu ajutorul clase JDesktop) noi ferestre unde vor aparea outputul in mod formatat.
 Am implementat toate cerintele task-ului 3.
 Bonus :
 Pentru bonus am introdus look-and-feel Nimbus, deoarece asa cum am explicat si mai sus Seaglas care era continut in arhiva temei nu afisa frumos terminalul si ferestrele interne.
@@ -74,11 +74,9 @@ Window->Preferences->Java->Build Path->Classpath Variables
 Si se va selecta Seaglas_Jar.
 Iar daca se doreste introducerea look-and-feel seaglas din cadrul arhivei(metoda 2) se va proceda urmator:
 - Se apasa Build si apoi build path, in dreapta se va alege Add external jar si se cauta arhiva dorita (adica seaglas.jar) si se apasa ok.
-- In locul try{ Ö UIManagerÖ} se va introduce urmatoare bucata de cod - - try { - UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel"); - } catch (Exception e) { - e.printStackTrace(); - }
-Comanda ìclearî introdusa va curata ecranu .
-Comanda ìexitî se va inchide programul.
+- In locul try{ ‚Ä¶ UIManager‚Ä¶} se va introduce urmatoare bucata de cod - - try { - UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel"); - } catch (Exception e) { - e.printStackTrace(); - }
+Comanda ‚Äúclear‚Äù introdusa va curata ecranu .
+Comanda ‚Äúexit‚Äù se va inchide programul.
 Am setat acestei aplicatii o iconita , ce se poate vedea in stanga sus cand se acceseaza programul sau jos in bara de aplicatii.
 In arhiva temei de asemenea am m-ai introdus si 2 teste de comenzii asemanatoare fisierului .txt dat in arhiva temei.
 Feedback
-Tema a fost frumoasa , m-a invatat foarte multe despre programare orientata pe obiecte in java, imi pare rau ca nu am putut sa o fac foarte bine , dar sper ca am facut binisor si arata bine pentru un inceput in limbajul atat de bogat Java. Acest proiect este primul facut in limbajul java si a fost placut .
- Sper ca pe viitor sa imi dezvolt mai mult capacitatea de a contrui aplicatii in java cu Design Pattern.
