@@ -1,7 +1,7 @@
 README
 Nume: Gogea
 Prenume : Mihail
-Titlu proiect : Programare orientate pe obiecte ( MyCloud )
+Titlu proiect : MyCloud -- Virtual Cloud (Object Oriented Programming)
 
 Observatii :
 Proiectul a fost lucrat in windows 7 cu ajutorul programului Eclipse (Mars) , fiind ultima versiune a lui Eclipse.
