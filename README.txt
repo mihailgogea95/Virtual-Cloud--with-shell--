@@ -3,8 +3,6 @@ Nume: Gogea
 Prenume : Mihail
 Grupa si serie : 324CC
 Tema : Programare orientate pe obiecte ( MyCloud )
-Grad de dificultate : 9/10
-Timpul alocat pentru tema : intre 32 – 40 de ore
 Observatii :
 Tema a fost lucrata in windows 7 cu ajutorul programului Eclipse (Mars) , fiind ultima versiune a lui Eclipse.
 Observatiile din Observer Pattern , adica logarile , delogarile si exceptiile vor fi salvate in fisierul evidenta.txt in care va fi salvat la iesirea din program( la apelarea comenzii : exit).
@@ -78,5 +76,3 @@ Iar daca se doreste introducerea look-and-feel seaglas din cadrul arhivei(metoda
 Comanda “clear” introdusa va curata ecranu .
 Comanda “exit” se va inchide programul.
 Am setat acestei aplicatii o iconita , ce se poate vedea in stanga sus cand se acceseaza programul sau jos in bara de aplicatii.
-In arhiva temei de asemenea am m-ai introdus si 2 teste de comenzii asemanatoare fisierului .txt dat in arhiva temei.
-Feedback
